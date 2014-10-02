@@ -71,7 +71,7 @@ Solution
 
 As far as I know, there is no solution that would not require rebuilding the kernel. There is one solution suggested [here](http://saadahmad.ca/using-pwm-on-the-beaglebone-black/). It will not allow you to change PWM period when you have both channels exported, but it will allow you to export one device, change period and export the other device then.
 
-The following solution will allow you to change the period at any time. It involves hacking with PWM channel code which I summarize in this [patch](http://raw.githubusercontent.com/avterekhov/bb-pwm/master/ti_ehr_pwm.patch]. Note that the patch was made for 3.8-rt kernel. For those who have no experience recompiling linux kernel and installing it on beaglebone I can recommend [these instructions](http://dev.ardupilot.com/wiki/building-for-beaglebone-black-on-linux/). If you follow them, you need to apply this patch just before building the kernel, i.e. after you execute
+The following solution will allow you to change the period at any time. It involves hacking with PWM channel code which I summarize in this [patch](http://raw.githubusercontent.com/avterekhov/bb-pwm/master/ti_ehr_pwm.patch). Note that the patch was made for 3.8-rt kernel. For those who have no experience recompiling linux kernel and installing it on beaglebone I can recommend [these instructions](http://dev.ardupilot.com/wiki/building-for-beaglebone-black-on-linux/). If you follow them, you need to apply this patch just before building the kernel, i.e. after you execute
 
         cd kernel
 
